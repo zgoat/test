@@ -1,0 +1,5 @@
+#!/bin/sh
+
+set -e
+[ -n "$CI" ] && export GOCACHE=/cache/go-build GOMODCACHE=/cache/go-mod
+go test -race ./...
